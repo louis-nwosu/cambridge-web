@@ -1,0 +1,58 @@
+.db-withdraw-plans-section {
+  width: 95%;
+  margin: 0 auto;
+  /* -webkit-box-shadow: 1px 0px 23px 2px rgba(0, 0, 0, 0.51);
+  box-shadow: 1px 0px 23px 2px rgba(0, 0, 0, 0.51); */
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.db-withdraw-history {
+  width: 94%;
+  margin: 0 auto;
+  -webkit-box-shadow: 1px 0px 23px 2px rgba(0, 0, 0, 0.51);
+  box-shadow: 1px 0px 23px 2px rgba(0, 0, 0, 0.51);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 30px;
+  height: 27vh;
+}
+
+.db-no-withdraw {
+  text-align: center;
+  color: #666;
+}
+
+.db-withdraw-figure {
+  font-size: 35px;
+}
+
+.db-withdraw-smal-txt {
+  font-size: 14px;
+  color: #fff;
+}
+
+.db-withdraw-plans-section > div {
+  width: 45%;
+  -webkit-box-shadow: 1px 0px 23px 2px rgba(0, 0, 0, 0.51);
+  box-shadow: 1px 0px 23px 2px rgba(0, 0, 0, 0.51);
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #1c4f52;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .db-withdraw-plans-section {
+    flex-direction: column;
+  }
+
+  .db-withdraw-plans-section > div {
+    width: 95%;
+  }
+
+  .db-withdraw-marg {
+    margin-top: 15px;
+  }
+}

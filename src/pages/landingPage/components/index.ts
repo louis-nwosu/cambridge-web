@@ -1,0 +1,9 @@
+export { Hero } from "./hero";
+export { Second } from "./second";
+export { Third } from "./third";
+export { Fourth } from "./fourth";
+export { Fifth } from "./fifth";
+export { Sixth } from "./sixth";
+export { FeaturesSection } from "./features";
+export { Pricing } from "./pricing";
+export { Objectives } from "./objective";

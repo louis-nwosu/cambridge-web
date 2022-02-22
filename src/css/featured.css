@@ -1,0 +1,18 @@
+.featured-item-container {
+  padding: 15px 10px;
+}
+
+.featured-container {
+  width: 75%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .featured-container {
+    flex-direction: column;
+  }
+}

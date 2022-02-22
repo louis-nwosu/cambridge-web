@@ -1,0 +1,64 @@
+.hero-container-desktop {
+  width: 100%;
+  position: relative;
+}
+
+.landing-page-mobile {
+  display: none;
+  height: 100vh
+}
+
+.lp-overlay-desktop {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lp-overlay-desktop > div {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.lp-overlay-text {
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.hero-video {
+  width: 100%;
+  height: auto;
+}
+
+.landing-page-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .hero-container-desktop {
+    display: none;
+  }
+
+  .landing-page-mobile {
+    display: block;
+  }
+
+  .lp-overlay-desktop > div {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .hero-video {
+    width: 100%;
+    height: auto;
+  }
+}

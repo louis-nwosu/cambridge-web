@@ -1,0 +1,14 @@
+.landingPage-featured-container {
+  position: relative;
+}
+
+.landingPage-featured-inner-div {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  .landingPage-featured-inner-div {
+    height: 200vh;
+  }
+}

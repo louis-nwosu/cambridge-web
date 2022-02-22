@@ -1,0 +1,35 @@
+.pricing-text-small {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.pricing-container {
+  width: 75%;
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pricing-container-item {
+  padding: 15px 10px;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+.pricing-container-item:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+  .pricing-text-small {
+    width: 80%;
+    margin: 25px auto;
+  }
+
+  .pricing-container {
+    overflow-x: scroll;
+    padding: 0;
+    width: 90%;
+  }
+}

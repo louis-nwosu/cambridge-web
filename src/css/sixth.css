@@ -1,0 +1,52 @@
+.sixth-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(2px);
+}
+
+.sixth-flex-container {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sixth-images {
+  width: 100%;
+  height: 300px;
+}
+
+.sixth-box {
+  width: 27%;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+}
+.sixth-box:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+  .sixth-overlay {
+    flex-direction: column;
+  }
+
+  .sixth-flex-container {
+    padding: 70px 0;
+    justify-content: space-around;
+    background-color: pink;
+  }
+
+  .sixth-images {
+    height: 500px;
+    width: 250px;
+  }
+
+  .sixth-box {
+    width: 100%;
+    margin: 0 10px;
+  }
+}

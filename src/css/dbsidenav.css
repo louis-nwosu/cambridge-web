@@ -1,0 +1,10 @@
+.db-sidenav-container {
+  width: 70%;
+  height: 100%;
+  color: #fff;
+}
+
+.sideNav-link-item {
+  color: #fff;
+  text-decoration: none;
+}
