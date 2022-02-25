@@ -27,7 +27,7 @@ export const Third: FC = () => {
       </Typography>
       <Box py={2}>
         <Typography variant="body2" align="center" color="primary">
-          Learn more about Cambridge
+          Learn more about Cambridge 
         </Typography>
       </Box>
     </Box>

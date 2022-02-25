@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 
 import { Box, Theme, Typography } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
@@ -15,24 +15,28 @@ const featuresContent = [
     textHeader: "BUSINESS ANALYSIS",
     textContent:
       "Cambride is a financial solution firm focused on serving independent professionals and their clients.",
+    key: 1
   },
   {
     icon: <StackedLineChartIcon style={{ fontSize: "48px", color: "#fff" }} />,
     textHeader: "BUSINESS EXPERTISE",
     textContent:
       "At cambride, we understand that business professionals need to chart the part that works best for their use cases.",
+    key: 2
   },
   {
     icon: <PieChartIcon style={{ fontSize: "48px", color: "#fff" }} />,
     textHeader: "Culture and Value",
     textContent:
       "We believe a firms culture influences its reputation. We think you can take a look at a firms started purpose and get a better understanding of its business engagements.   ",
+    key: 3
   },
   {
     icon: <BubbleChartIcon style={{ fontSize: "48px", color: "#fff" }} />,
     textHeader: "INVESTMENT CONNECTIONS",
     textContent:
       "Invest with confidence, knowing that multiple entities are working towards t your financial assets and looking out for better investment option.",
+    key: 4
   },
 ];
 
@@ -71,24 +75,26 @@ export const FeaturesSection: FC = () => {
   return (
     <div className="featured-container">
       {featuresContent.map((item: any) => (
-        <div className={classes.itemContainer}>
-          <Box bgcolor="darkslateblue" p={3} className={classes.cont}>
-            <Box pb={1}>
-              <Box display="flex" alignItems="center" justifyContent="center">
-                {item.icon}
+        <Fragment key={item.key}>
+          <div className={classes.itemContainer}>
+            <Box bgcolor="darkslateblue" p={3} className={classes.cont}>
+              <Box pb={1}>
+                <Box display="flex" alignItems="center" justifyContent="center">
+                  {item.icon}
+                </Box>
+                <Typography variant="h5" component="p" color="#fff">
+                  {item.textHeader}
+                </Typography>
               </Box>
-              <Typography variant="h5" component="p" color="#fff">
-                {item.textHeader}
-              </Typography>
+              <div className={classes.dash}></div>
+              <Box className={classes.Text}>
+                <Typography variant="body1" color="#fff">
+                  {item.textContent}
+                </Typography>
+              </Box>
             </Box>
-            <div className={classes.dash}></div>
-            <Box className={classes.Text}>
-              <Typography variant="body1" color="#fff">
-                {item.textContent}
-              </Typography>
-            </Box>
-          </Box>
-        </div>
+          </div>
+        </Fragment>
       ))}
     </div>
   );

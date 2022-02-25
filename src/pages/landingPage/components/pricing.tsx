@@ -85,90 +85,92 @@ export const Pricing: FC = () => {
       </Box>
       <div className="pricing-container">
         {priceInfo.map((item: any) => (
-          <div className="pricing-container-item">
-            <Box p={2} className={classes.cont}>
-              <Box
-                py={2}
-                px={1.5}
-                bgcolor="#1f3f5c"
-                style={{
-                  backgroundImage:
-                    "box-shadow: -1px 0px 15px 0px rgba(0,0,0,0.75)",
-                }}
-              >
-                <Typography
-                  variant="h6"
-                  component="p"
-                  color="#fff"
-                  fontSize={18}
+          <Fragment key={Math.random()}>
+            <div className="pricing-container-item">
+              <Box p={2} className={classes.cont}>
+                <Box
+                  py={2}
+                  px={1.5}
+                  bgcolor="#1f3f5c"
+                  style={{
+                    backgroundImage:
+                      "box-shadow: -1px 0px 15px 0px rgba(0,0,0,0.75)",
+                  }}
                 >
-                  {item.text1}
-                </Typography>
-                <Typography
-                  variant="body2"
-                  component="p"
-                  align="center"
-                  color="#fff"
-                >
-                  {item.textSmall}
-                </Typography>
-              </Box>
-              <Box>
-                <Box py={3} px={1} style={{ border: "1px solid #999" }}>
-                  <div className={classes.priceDisp}>
-                    <span style={{ marginTop: "15px" }}>
-                      <Typography variant="body2" color="primary">
-                        $
-                      </Typography>
-                    </span>
-                    <span style={{ marginTop: "10px" }}>
-                      <Typography variant="h4" color="primary">
-                        {item.price}
-                      </Typography>
-                    </span>
-                    <p style={{ color: "#888" }}>{item.min}</p>
-                  </div>
-                  <Box py={1.5}>
-                    <div className={classes.priceInfo}>
-                      <CheckCircleIcon
-                        style={{ color: "#888", fontSize: 12 }}
-                      />
-                      <Box mx={0.5}>
-                        <Typography variant="body2" color="#888" fontSize={12}>
-                          ROI(30%-35%)
+                  <Typography
+                    variant="h6"
+                    component="p"
+                    color="#fff"
+                    fontSize={18}
+                  >
+                    {item.text1}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    component="p"
+                    align="center"
+                    color="#fff"
+                  >
+                    {item.textSmall}
+                  </Typography>
+                </Box>
+                <Box>
+                  <Box py={3} px={1} style={{ border: "1px solid #999" }}>
+                    <div className={classes.priceDisp}>
+                      <span style={{ marginTop: "15px" }}>
+                        <Typography variant="body2" color="primary">
+                          $
                         </Typography>
-                      </Box>
-                    </div>
-                    <div className={classes.priceInfo}>
-                      <CheckCircleIcon
-                        style={{ color: "#888", fontSize: "12px" }}
-                      />
-                      <Box mx={0.5}>
-                        <Typography variant="body2" color="#888" fontSize={12}>
-                          ROI(30%-35%)
+                      </span>
+                      <span style={{ marginTop: "10px" }}>
+                        <Typography variant="h4" color="primary">
+                          {item.price}
                         </Typography>
-                      </Box>
-                    </div>
-                    <div className={classes.priceInfo}>
-                      <CheckCircleIcon
-                        style={{ color: "#888", fontSize: "12px" }}
-                      />
-                      <Box mx={0.5}>
-                        <Typography variant="body2" color="#888" fontSize={12}>
-                          ROI(30%-35%)
-                        </Typography>
-                      </Box>
+                      </span>
+                      <p style={{ color: "#888" }}>{item.min}</p>
                     </div>
                     <Box py={1.5}>
-                      <Button variant="contained" fullWidth size="small">
-                        Open Account
-                      </Button>
+                      <div className={classes.priceInfo}>
+                        <CheckCircleIcon
+                          style={{ color: "#888", fontSize: 12 }}
+                        />
+                        <Box mx={0.5}>
+                          <Typography variant="body2" color="#888" fontSize={12}>
+                            ROI(30%-35%)
+                          </Typography>
+                        </Box>
+                      </div>
+                      <div className={classes.priceInfo}>
+                        <CheckCircleIcon
+                          style={{ color: "#888", fontSize: "12px" }}
+                        />
+                        <Box mx={0.5}>
+                          <Typography variant="body2" color="#888" fontSize={12}>
+                            ROI(30%-35%)
+                          </Typography>
+                        </Box>
+                      </div>
+                      <div className={classes.priceInfo}>
+                        <CheckCircleIcon
+                          style={{ color: "#888", fontSize: "12px" }}
+                        />
+                        <Box mx={0.5}>
+                          <Typography variant="body2" color="#888" fontSize={12}>
+                            ROI(30%-35%)
+                          </Typography>
+                        </Box>
+                      </div>
+                      <Box py={1.5}>
+                        <Button variant="contained" fullWidth size="small">
+                          Open Account
+                        </Button>
+                      </Box>
                     </Box>
                   </Box>
                 </Box>
               </Box>
-            </Box>
-          </div>
+            </div>
+          </Fragment>
         ))}
       </div>
     </Fragment>

@@ -38,7 +38,7 @@ export const LandingPageLayout: FC = ({ children }) => {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <Grid md={12}>
+      <Grid item md={12}>
         <Typography variant="body2" align="right" color="#469fe3" fontSize={12}>
           Financial Professional Log in | FINRA's BrokerCheck
         </Typography>

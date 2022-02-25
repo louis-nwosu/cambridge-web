@@ -87,7 +87,7 @@ export const Objectives: FC = () => {
               risk.
             </Typography>
           </Grid>
-          <Grid md={4} xs={12}>
+          <Grid item md={4} xs={12}>
             <Box sx={{ flexGrow: 1 }}>
               <Box mb={1.5}>
                 <Box>

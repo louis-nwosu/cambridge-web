@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 
 import { Box, Typography } from "@mui/material";
 import { makeStyles, createStyles } from "@mui/styles";
@@ -49,26 +49,28 @@ export const Fourth: FC = () => {
   return (
     <Box className="fourth-container">
       {displays.map((item: any) => (
-        <Box className="fourth-box">
-          <div className={classes.imageContainer}>
-            <img src={item.img} alt="first" className={classes.images} />
-          </div>
-          <Box my={1}>
-            <Typography
-              variant="h6"
-              component="p"
-              align="center"
-              color="primary"
-            >
-              {item.textHeader}
-            </Typography>
+        <Fragment key={Math.random()}>
+          <Box className="fourth-box">
+            <div className={classes.imageContainer}>
+              <img src={item.img} alt="first" className={classes.images} />
+            </div>
+            <Box my={1}>
+              <Typography
+                variant="h6"
+                component="p"
+                align="center"
+                color="primary"
+              >
+                {item.textHeader}
+              </Typography>
+            </Box>
+            <Box py={1} className="fourth-text-container">
+              <Typography variant="body2" align="center">
+                {item.textBody}
+              </Typography>
+            </Box>
           </Box>
-          <Box py={1} className="fourth-text-container">
-            <Typography variant="body2" align="center">
-              {item.textBody}
-            </Typography>
-          </Box>
-        </Box>
+        </Fragment>
       ))}
     </Box>
   );
