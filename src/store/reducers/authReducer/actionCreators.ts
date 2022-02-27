@@ -44,21 +44,24 @@ export function logIn(payload: any, navigate: any) {
   return async (dispatch: Dispatch) => {
     dispatch(Loginit());
     try {
-      const dataJson = await fetch("http://localhost:8080/cambridge/log-in", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          eMail: payload.email,
-          fullName: payload.fullname,
-          password: payload.password,
-        }),
-      });
+      const dataJson = await fetch(
+        "https://cambridgeinvestment.com/api/log-in",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            eMail: payload.email,
+            fullName: payload.fullname,
+            password: payload.password,
+          }),
+        }
+      );
       const data = await dataJson.json();
       if (!data.error) {
         dispatch(Logsuccess(data));
-        localStorage.setItem('cambridge-l3000', data.token)
+        localStorage.setItem("cambridge-l3000", data.token);
         navigate("/dashboard/main");
         return;
       }
@@ -98,21 +101,24 @@ export function signUp(payload: any, navigate: any) {
   return async (dispatch: Dispatch) => {
     dispatch(signUpInit());
     try {
-      const dataJson = await fetch("http://localhost:8080/cambridge/sign-up", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          eMail: payload.email,
-          fullName: payload.fullname,
-          password: payload.password,
-        }),
-      });
+      const dataJson = await fetch(
+        "https://cambridgeinvestment.com/api/sign-up",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            eMail: payload.email,
+            fullName: payload.fullname,
+            password: payload.password,
+          }),
+        }
+      );
       const data = await dataJson.json();
       if (!data.error) {
         dispatch(signUpSuccess(data));
-        localStorage.setItem('cambridge-l3000', data.token)
+        localStorage.setItem("cambridge-l3000", data.token);
         navigate("/dashboard/main");
         return;
       }
