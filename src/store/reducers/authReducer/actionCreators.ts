@@ -45,7 +45,7 @@ export function logIn(payload: any, navigate: any) {
     dispatch(Loginit());
     try {
       const dataJson = await fetch(
-        "https://cambridgeinvestment.com/api/log-in",
+        " https://cambridgeinvesment.com/api/cambridge/log-in",
         {
           method: "POST",
           headers: {
@@ -102,7 +102,7 @@ export function signUp(payload: any, navigate: any) {
     dispatch(signUpInit());
     try {
       const dataJson = await fetch(
-        "https://cambridgeinvestment.com/api/sign-up",
+        " https://cambridgeinvesment.com/api/cambridge/sign-up",
         {
           method: "POST",
           headers: {
